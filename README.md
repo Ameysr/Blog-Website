@@ -5,7 +5,7 @@ Blog website
 main features :<br>
 
 1 schdule blog 
-  - you can schdule the blog and also see the published blogs in the dashbaord Section
+  - you can schdule the blog and also see the published blogs in the dashbaord Section (w8 dashboard page till  auto publish if you leave, it may not work some time).
 
 2 notes 
   - see saved notes on dashboard
