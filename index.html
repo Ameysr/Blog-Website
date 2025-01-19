@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="hakethon2.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Menu Start -->
+    <div class="menu" id="menu">
+        <!-- Home Icon -->
+        <div class="home">
+            <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="1.8" stroke="rgb(120, 120, 120)" xmlns="http://www.w3.org/2000/svg"><g><title></title><path fill-rule="evenodd" clip-rule="evenodd" d="M17.315 5.49313C16.5616 4.83562 15.4384 4.83562 14.685 5.49313L6.02743 13.0485C5.37462 13.6183 5 14.4424 5 15.3089L5 23.6727C5 25.8819 6.79086 27.6727 9 27.6727L23 27.6727C25.2091 27.6727 27 25.8819 27 23.6727V15.3089C27 14.4424 26.6254 13.6183 25.9726 13.0485L17.315 5.49313ZM14.4472 21.7783C13.9532 21.5313 13.3525 21.7315 13.1055 22.2255C12.8586 22.7195 13.0588 23.3201 13.5528 23.5671C15.0933 24.3374 16.9067 24.3374 18.4472 23.5671C18.9412 23.3201 19.1414 22.7195 18.8944 22.2255C18.6474 21.7315 18.0468 21.5313 17.5528 21.7783C16.5753 22.267 15.4247 22.267 14.4472 21.7783Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>            
+        </div>
+        
+         <!-- Search Icon -->
+        <div class="search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="notes">
+            <button id="publishButton"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_icon_15tln_55">
+                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>           
+            </button>
+            <div class="overlay" id="overlay"></div>
+            <div class="notes-pop" id="notes-pop">
+                <div class="notesheader">
+                    <h1>Notes</h1>
+                    <button data-close-button class="closebutton">&times;</button>
+                </div>
+                <div class="notescontent">
+                    <textarea id="note-textarea" placeholder="Write your note here..." rows="10" cols="50"></textarea>
+                </div>
+                <div class="notesfooter">
+                    <button class="cancle closebutton">Cancel</button>
+                    <button class="save">Save</button>
+                </div>
+            </div>                
+        </div>
+        
+        <!-- Add Post Section -->
+        <div class="addpost">
+            <a href="texteditor.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </a>
+        </div>   
+    </div>
+    <!-- Menu End -->
+
+    <!-- Main Content Start -->
+    <div class="content">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="menuname">
+                Home
+            </div>
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_icon_4miar_34">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <input type="text" placeholder="Search..." />
+            </div>
+
+             <!-- Mobile View Icons -->
+            <div class="mobileView">
+                <div class="forMobilePhone" id="searchBar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_icon_4miar_34">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </div>
+    
+                <div class="mobileViewDashboard" id="dashbord">
+                    <a href="dashbord.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></a>
+                </div>
+                    
+                <!-- Mobile Menu -->
+                <div class="mobileMenu" id="mobileMenu">
+                    <div class="menuItem">
+                        <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="1.8" stroke="rgb(120, 120, 120)" xmlns="http://www.w3.org/2000/svg"><g><title></title><path fill-rule="evenodd" clip-rule="evenodd" d="M17.315 5.49313C16.5616 4.83562 15.4384 4.83562 14.685 5.49313L6.02743 13.0485C5.37462 13.6183 5 14.4424 5 15.3089L5 23.6727C5 25.8819 6.79086 27.6727 9 27.6727L23 27.6727C25.2091 27.6727 27 25.8819 27 23.6727V15.3089C27 14.4424 26.6254 13.6183 25.9726 13.0485L17.315 5.49313ZM14.4472 21.7783C13.9532 21.5313 13.3525 21.7315 13.1055 22.2255C12.8586 22.7195 13.0588 23.3201 13.5528 23.5671C15.0933 24.3374 16.9067 24.3374 18.4472 23.5671C18.9412 23.3201 19.1414 22.7195 18.8944 22.2255C18.6474 21.7315 18.0468 21.5313 17.5528 21.7783C16.5753 22.267 15.4247 22.267 14.4472 21.7783Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>            
+                        <span>Home</span>
+                    </div>
+                    <div class="menuItem">
+                        <a href="dashbord.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></a>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="menuItem">
+                        <button id="notesMenuItemM">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                            </svg>
+                        </button>
+                        <div class="overlayM" id="overlayM"></div>
+                        <div class="notes-popM" id="notes-popM">
+                            <div class="notesheader">
+                                <h1>Notes</h1>
+                                <button data-close-button class="closebuttonM">&times;</button>
+                            </div>
+                            <div class="notescontentM">
+                                <textarea id="note-textareaM" placeholder="Write your note here..." rows="10" cols="50"></textarea>
+                            </div>
+                            <div class="notesfooterM">
+                                <button class="cancleM closebuttonM">Cancel</button>
+                                <button class="saveM" id="save-note">Save</button>
+                            </div>
+                            </div>
+                            <span>Notes</span>
+                        </div>                        
+                        <div class="menuItem">
+                            <a href="texteditor.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                            </a>
+                            <span>Add Post</span>
+                        </div>
+                        <div class="menuItem">
+                            <svg role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke="rgb(120, 120, 120)" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" style="height: 32px; width: 32px;"><g><title></title><path d="M8.5 25.5C9.5 24.5 9.83333 22.3333 9.5 21.5C9.42273 21.4734 8.84545 21.2538 8.76817 21.2262C7.66999 20.8332 7 19.7542 7 18.5879V9.87424C7 8.72745 7.64925 7.6677 8.73365 7.2946C12.2079 6.09927 18.2029 5.11688 24.2305 7.27337C25.3287 7.66627 26 8.74577 26 9.91214V18.6258C26 19.7726 25.3496 20.8328 24.2652 21.2058C21.9099 22.016 18.3965 22.7282 14.5 22.4312C13.5 24.4312 11 25.5 8.5 25.5Z"></path></g></svg>            
+                            <span>Chat</span>
+                        </div>
+                        <div class="menuItem">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(120, 120, 120)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_icon_4miar_34">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </svg>
+                            <span>Search</span>
+                        </div>
+                        
+                    </div>
+                    <div id="humbergerIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    </div>
+                </div>
+
+
+
+                <div class="userinfo">
+                    <div class="darshboard">
+                        <a href="dashbord.html">
+                            Dashboard                        
+                        </a>
+                    </div>
+                    <div class="profile">
+                        <img src="profileimg.jpg" alt="">   
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+        
+        <div id="filter">
+            <button id="Culture">Culture</button>
+            <button id="Arts">Arts</button>
+            <button id="Business">Business</button>
+            <button id="Politics">Politics</button>
+            <button id="Finance">Finance</button>
+        </div>
+        
+        <div id="filter-wrapper">
+            <button id="filter-toggle">Filter</button>
+            <div id="filter" class="hidden">
+                <button id="Culture">Culture</button>
+                <button id="Arts">Arts</button>
+                <button id="Business">Business</button>
+                <button id="Politics">Politics</button>
+                <button id="Finance">Finance</button>
+            </div>
+        </div>
+        
+        <div id="blogs" class="blog-container"></div>
+        
+    </div>
+    <script src="hakethon2.js"></script>
+</body>
+</html>
