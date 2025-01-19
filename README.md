@@ -5,10 +5,10 @@ Blog website
 main features :<br>
 
 1 schdule blog 
-  - you can schdule the blog and aslo see the published blogs in the dashbord Section
+  - you can schdule the blog and also see the published blogs in the dashbaord Section
 
 2 notes 
-  - see saved notes on dashbord
+  - see saved notes on dashboard
 
 3 rich text editor
   - italic blod underline point funtions are available
